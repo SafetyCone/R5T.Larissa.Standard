@@ -4,4 +4,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>1701;1702;1591;1573</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.Caledonia.Default\source\R5T.Caledonia.Default\R5T.Caledonia.Default.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Larissa.Configuration.Sardinia\source\R5T.Larissa.Configuration.Sardinia\R5T.Larissa.Configuration.Sardinia.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Larissa.Configuration.Suebia\source\R5T.Larissa.Configuration.Suebia\R5T.Larissa.Configuration.Suebia.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Larissa.Default\source\R5T.Larissa.Default\R5T.Larissa.Default.csproj" />
+  </ItemGroup>
 </Project>
