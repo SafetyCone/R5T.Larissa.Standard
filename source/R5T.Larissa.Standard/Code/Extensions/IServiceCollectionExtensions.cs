@@ -19,6 +19,8 @@ namespace R5T.Larissa.Standard
             services
                 .AddSingleton<ISvnOperator, SvnOperator>()
                 .AddSingleton<ISvnExecutableFilePathProvider, ConfigurationBasedSvnExecutableFilePathProvider>()
+                .AddSingleton<ISvnversionOperator, SvnversionOperator>()
+                .AddSingleton<ISvnversionExecutableFilePathProvider, ConfigurationBasedSvnversionExecutableFilePathProvider>()
                 .AddSvnConfiguration()
                 .AddSingleton<ICommandLineInvocationOperator, DefaultCommandLineInvocationOperator>()
                 ;
