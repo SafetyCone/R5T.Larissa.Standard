@@ -42,7 +42,7 @@ namespace R5T.Larissa.Standard
             });
 
             // 2.
-            var svnOperatorAction = ServiceAction<ISvnOperator>.New(() => services.AddSvnOperatorAction(
+            var svnOperatorAction = ServiceAction<ISvnOperator>.New(() => services.AddSvnOperator(
                 commandLineInvocationOperatorAction,
                 stringlyTypedPathOperatorAction,
                 svnExecutableFilePathProviderAction,
