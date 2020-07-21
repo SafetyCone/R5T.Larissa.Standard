@@ -21,7 +21,7 @@ namespace R5T.Larissa.Standard
             (
             IServiceAction<ISvnOperator> main,
             IServiceAction<ICommandLineInvocationOperator> commandLineInvocationOperatorAction,
-            IServiceAction<IOptions<SvnConfiguration>> svnConfigurationOptions,
+            IServiceAction<IOptions<SvnConfiguration>> svnConfigurationAction,
             IServiceAction<ISvnExecutableFilePathProvider> svnExecutableFilePathProviderAction
             )
         AddSvnOperatorAction(this IServiceCollection services,
