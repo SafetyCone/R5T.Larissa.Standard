@@ -19,9 +19,9 @@ namespace R5T.Larissa.Standard
     {
         public static
             (
+            IServiceAction<ISvnOperator> main,
             IServiceAction<ICommandLineInvocationOperator> commandLineInvocationOperatorAction,
             IServiceAction<IOptions<SvnConfiguration>> svnConfigurationOptions,
-            IServiceAction<ISvnOperator> svnOperatorAction,
             IServiceAction<ISvnExecutableFilePathProvider> svnExecutableFilePathProviderAction
             )
         AddSvnOperatorAction(this IServiceCollection services,
@@ -50,9 +50,9 @@ namespace R5T.Larissa.Standard
 
             var output =
             (
+                svnOperatorAction,
                 commandLineInvocationOperatorAction,
                 svnConfigurationOptionsAction,
-                svnOperatorAction,
                 svnExecutableFilePathProviderAction
             );
             return output;
@@ -74,8 +74,8 @@ namespace R5T.Larissa.Standard
 
         public static 
             (
-            IServiceAction<ISvnversionExecutableFilePathProvider> svnversionExecutableFilePathProviderAction,
-            IServiceAction<ISvnversionOperator> svnversionOperatorAction
+            IServiceAction<ISvnversionOperator> main,
+            IServiceAction<ISvnversionExecutableFilePathProvider> svnversionExecutableFilePathProviderAction
             )
         AddSvnversionOperatorAction(this IServiceCollection services,
             IServiceAction<ILogger> loggerAction)
@@ -104,8 +104,8 @@ namespace R5T.Larissa.Standard
 
             var output =
             (
-                svnversionExecutableFilePathProviderAction,
-                svnversionOperatorAction
+                svnversionOperatorAction,
+                svnversionExecutableFilePathProviderAction
             );
             return output;
         }
